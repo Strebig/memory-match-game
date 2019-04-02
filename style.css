@@ -1,0 +1,90 @@
+html {
+
+}
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.mainNav {
+    width: 100%;
+    background-color: #1b6d85;
+    height: 15vh;
+}
+
+.nav {
+    text-align: center;
+}
+
+.mainLogo {
+    background-color: red;
+    width: 25%;
+    height: 10vh;
+}
+
+.mainGame {
+    background-color: cyan;
+    width: 100%;
+    height: 85vh;
+}
+
+.statsArea {
+    background-color: greenyellow;
+    height: 55vh;
+    width: 25%;
+    display: inline-block;
+    padding-top: 25px;
+    position: absolute;
+}
+
+.cardContainer {
+    width: 16.66%;
+    background-color: red;
+    height: 33.33%;
+    float: left;
+}
+.cardContainerMiddle {
+    width: 16.66%;
+    background-color: green;
+    height: 33.33%;
+    float: left;
+}
+
+.cardContainerBottom {
+    width: 16.66%;
+    background-color: orange;
+    height: 33.33%;
+    float: left;
+}
+
+.card {
+    width: 16.66%;
+    background-color: red;
+    height: 33.33%;
+    position: relative;
+    float: right;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.front {
+    background-color: teal;
+}
+
+.back {
+    background-color: blue;
+}
+
+.card:hover > .back {
+    display: none;
+}
