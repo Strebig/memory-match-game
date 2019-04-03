@@ -10,16 +10,27 @@ body {
     width: 100%;
     background-color: #1b6d85;
     height: 15vh;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav {
-    text-align: center;
+    font-size: 36px;
+    justify-content: center;
+    align-items:center;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 .mainLogo {
-    background-color: red;
+    background-color: plum;
     width: 25%;
-    height: 10vh;
+    height: 100%;
+    display: flex;
 }
 
 .mainGame {
@@ -32,9 +43,8 @@ body {
 .statsArea {
     background-color: greenyellow;
     height: 55vh;
-    width: 25%;
+    width: 20%;
     display: flex;
-    padding-top: 25px;
     position: relative;
 }
 
@@ -42,27 +52,14 @@ body {
 .cardContainer {
     width: 16.66%;
     background-color: red;
-    height: 33.33%;
+    height: 90%;
     float: left;
     position: relative;
     display: flex;
+    flex-direction: column;
 
 }
-.cardContainerMiddle {
-    width: 16.66%;
-    background-color: green;
-    height: 33.33%;
-    float: left;
-    position: relative;
-    display: flex;
-}
 
-.cardContainerBottom {
-    width: 16.66%;
-    background-color: orange;
-    height: 33.33%;
-    float: left;
-}
 
 .card{
     top: 5%;
@@ -72,10 +69,10 @@ body {
     background-color: orange;
     position: relative;
     float: left;
-
 }
+
 .front, .back{
-    height: 100%;
+    height: 90%;
     width: 100%;
     position: absolute;
     left: 0;
