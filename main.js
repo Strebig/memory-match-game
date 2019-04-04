@@ -7,14 +7,15 @@ function initializeApp() {
     var match_counter = 0;
 
     $('.card').on('click', '.back', function cardClicked (event) {
-        event.currentTarget === this;
-        $(this).hide('.back');
 
-        if (first_card_clicked) {
-            first_card_clicked = $(this).currentTarget;
+        if (first_card_clicked == null) {
+            first_card_clicked = event.currentTarget;
+            $(this).hide('.back');
+            first_card_clicked = $('.front').currentTarget;
             return first_card_clicked;
         }
-        second_card_clicked = $(this).currentTarget;
+        second_card_clicked = event.currentTarget;
+        second_card_clicked = $('.front').currentTarget;
 
 
         if (first_card_clicked === second_card_clicked) {
@@ -23,16 +24,16 @@ function initializeApp() {
             second_card_clicked = null;
             if (match_counter === total_possible_matches) {
                 return "You have survived for now... but Winter is coming."
-            } else {
-                setTimeout(function () {
-                }, 2000);
-                first_card_clicked = $('.back').show();
-                second_card_clicked = $('.back').show();
-                first_card_clicked = null;
-                second_card_clicked = null;
-
             }
         }
+        setInterval(function () {
+            first_card_clicked = $('.back').show();
+            second_card_clicked = $('.back').show();
+        }, 2000);
+
+        first_card_clicked = null;
+        second_card_clicked = null;
+
     })
 
 }
