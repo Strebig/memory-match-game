@@ -79,9 +79,13 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+
 }
 
-
-.card:hover > .back {
-    display: none;
+.back {
+    visibility: ;
 }
+
+/*.card:hover > .back {*/
+    /*display: none;*/
+/*}*/
