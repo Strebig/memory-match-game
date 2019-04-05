@@ -5,17 +5,42 @@ function initializeApp() {
     var second_card_clicked = null;
     var total_possible_matches = 2;
     var match_counter = 0;
+    var canClickCard = true;
+    var images = ['johnsnow.jpg', 'dragonlady.jpg'];
+
+
+    function randomizeCards (){
+        var doubleImages = images.concat(images);
+
+        for (var i = 0; i < doubleImages.length; i++) {
+
+            var container = $('<div>').addClass('cardContainer');
+            var card = $('<div>').addClass('card');
+            var back = $('<div>').addClass('back');
+            var front = $('<div>').addClass('front');
+            var image = $('<img>').addClass('imageMod').attr('src', doubleImages[i]);
+            front.append(image);
+            card.append(front,back);
+            container.append(card);
+            $('.mainGame').append(container);
+        }
+
+    }
 
     $('.card').on('click', '.back', function cardClicked (event) {
-
+        if (canClickCard === false){
+            return;
+        }
+// event current target is core javascript... Jquery cant do that
         if (first_card_clicked == null) {
             first_card_clicked = event.currentTarget;
             $(this).hide('.back');
-            first_card_clicked = $('.front').currentTarget;
+            first_card_clicked.find('.front img').attr('src');
             return first_card_clicked;
         }
         second_card_clicked = event.currentTarget;
-        second_card_clicked = $('.front').currentTarget;
+        second_card_clicked.find('.front img').attr('src');
+
 
 
         if (first_card_clicked === second_card_clicked) {
@@ -26,19 +51,23 @@ function initializeApp() {
                 return "You have survived for now... but Winter is coming."
             }
         }
-        setInterval(function () {
+        canClickCard = false;
+        setTimeout(hideBothCards, 2000);
+
+
+        function hideBothCards() {
             first_card_clicked = $('.back').show();
             second_card_clicked = $('.back').show();
-        }, 2000);
-
-        first_card_clicked = null;
-        second_card_clicked = null;
+            first_card_clicked = null;
+            second_card_clicked = null;
+            canClickCard = true;
+        }
 
     })
 
 }
 
-//pseudo code
+//pseudo code // .find('.front img').attr('src');
 //target front of the card to match the same card, and if they match..
 // stay front-faced. If they aren't a match, flip backwards.
 // only can choose 2 cards at a time.
