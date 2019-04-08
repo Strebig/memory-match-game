@@ -107,7 +107,7 @@ function randomizeCards() {
                 $("#win-game-modal").modal('show');
             }
         }
-        else if (attempts === 1) {
+        else if (attempts === 17) {
             setTimeout(function () {
                 $("#lost-game-modal").modal('show');
                 gamesPlayed++;
