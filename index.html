@@ -1,58 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Memory Match -Game- of Thrones</title>
+    <title>Memory Match Game of Thrones</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">Game of Thrones Memory Match</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+<nav class="navbar navbar-expand navbar-dark bg-dark ">
+    <a class="navbar-brand col-8" href="index.html">GoT Memory Match</a>
+    <div id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About Me</a>
+            <li class="nav-item col-6 offset-sm-2 offset-md-6">
+                <a class="nav-link" href="https://nickstrebig.com">About</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Settings</a>
+            <li class="nav-item offset-sm-1">
+                <button class="btn btn-light resetButton">Reset</button>
             </li>
         </ul>
     </div>
 </nav>
-<div class="row">
-    <div class="col-md-12 text-center header-logo">
-        <img class="img-fluid" alt="Game Of Thrones Logo" src="images/Logo_Game_of_Thrones.png" />
-    </div>
-</div>
 <div class="container">
     <div class="row stats-area">
-        <div class="col-md-3 games-played text-center">
+        <div class="col-3 games-played text-center">
             <p class="label">Games Played</p>
-            <p class="value"></p>
+            <p class="value" >0</p>
         </div>
-        <div class="col-md-3 attempts text-center">
-            <p class="label">Attempts</p>
-            <p class="value"></p>
+        <div class="col-3 attempts text-center">
+            <p class="label">Made Attempts</p>
+            <p class="value">0</p>
         </div>
-        <div class="col-md-3 accuracy text-center">
-            <p class="label">Accuracy</p>
-            <p class="value"></p>
+        <div class="col-3 attemptsRemaining text-center">
+            <p class="label">Attempts Remain</p>
+            <p class="value">15</p>
         </div>
-        <div class="col-md-3 text-center">
-            <button class="btn btn-dark resetButton">Reset</button>
+        <div class="col-3 accuracy text-center">
+            <p class="label">Current Accuracy</p>
+            <p class="value">0%</p>
         </div>
     </div>
-    <div class="mainGame"> </div>
+        <div class="mainGame"> </div>
 </div>
 
 <div class="modal fade" id="win-game-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">You've Saved Yourself This Time... Congrats!</h5>
+                <h5 class="modal-title text-center" id="exampleModalLongTitle">You've Saved Yourself This Time... Congrats!</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -71,7 +64,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">You've Fallen to your Death. LOSS!</h5>
+                <h5 class="modal-title text-center" id="exampleModalLongTitle">You've Fallen to your Death. LOSS!</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

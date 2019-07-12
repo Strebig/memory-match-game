@@ -1,21 +1,8 @@
 body {
-    margin: 0;
-}
-
-
-.mainNav {
-    background-color: #1b6d85;
-    height: 15vh;
-}
-
-header {
-    background-image: url("images/Logo_Game_of_Thrones.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.header-logo {
-    background: #1b6d85;
+    background-image: url('images/dust_scratches.png');
+    background-size: cover;
+    margin-bottom: 10vh;
+    height: 100vh;
 }
 
 .stats-area {
@@ -32,11 +19,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    opacity: 1;
 }
 
-.got-card{
-    display: block;
+.got-card:hover{
+    opacity: 0.25;
 }
 
 .flip-scale-up-ver {
