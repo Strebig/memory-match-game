@@ -27,6 +27,9 @@ const images = [
 function initializeApp() {
     randomizeCards();
     $('.resetButton').on('click', function () {
+        if (first_card_clicked || second_card_clicked){
+            hideBothCards();
+        }
         gamesPlayed++;
         resetStats();
         displayStats();
@@ -111,7 +114,7 @@ function randomizeCards() {
             canClickCard = true;
         } else {
             if (attempts < 15) {
-                setTimeout(hideBothCards, 2000);
+                setTimeout(hideBothCards, 600);
             }
         }
 
@@ -126,11 +129,6 @@ function randomizeCards() {
                     $(container).find('.back').hide();
                     canClickCard = false;
                 }
-                // gamesPlayed++;
-                // resetStats();
-                // displayStats();
-                // $('.mainGame').empty();
-                // randomizeCards();
             }, 1500);
         }
 
