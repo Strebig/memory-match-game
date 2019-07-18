@@ -64,7 +64,7 @@ function randomizeCards() {
     for (var i = 0; i < shuffledImages.length; i++) {
         var col = $('<div>').addClass('col-4 col-sm-3 col-lg-2 text-center mb-3 cardContainer');
         var card = $('<div>').addClass('got-card');
-        var back = $('<div>').addClass('back');
+        var back = $('<div>').addClass('back pointer');
         var front = $('<div>').addClass('front flip-scale-up-ver');
         var image = $('<img>').attr('src', shuffledImages[i]).addClass('img-fluid');
         var backImage = $('<img>').attr('src', 'images/gotlogo.jpg').addClass('img-fluid');
