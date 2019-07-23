@@ -1,0 +1,76 @@
+body {
+    background-image: url('images/dust_scratches.png');
+    background-size: cover;
+    margin-bottom: 10vh;
+    height: 100vh;
+}
+a {
+    color: black;
+}
+.nav-header{
+    font-family: 'Racing Sans One', cursive;
+    background-image: url('images/gotheader.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.stats-area {
+    padding: 15px;
+}
+
+.statsArea div{
+    display: inline-block;
+}
+
+.cardContainer {
+    width: 16.66%;
+    height: 85%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 1;
+}
+
+.got-card:hover{
+    opacity: 0.25;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.flip-scale-up-ver {
+    -webkit-animation: flip-scale-up-ver 0.3s ease-in both;
+    animation: flip-scale-up-ver 0.3s ease-in both;
+}
+
+@-webkit-keyframes flip-scale-up-ver {
+    0% {
+        -webkit-transform: scale(1) rotateY(0);
+        transform: scale(1) rotateY(0);
+    }
+    50% {
+        -webkit-transform: scale(1.5) rotateY(90deg);
+        transform: scale(1.5) rotateY(90deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotateY(180deg);
+        transform: scale(1) rotateY(180deg);
+    }
+}
+@keyframes flip-scale-up-ver {
+    0% {
+        -webkit-transform: scale(1) rotateY(0);
+        transform: scale(1) rotateY(0);
+    }
+    50% {
+        -webkit-transform: scale(1.5) rotateY(90deg);
+        transform: scale(1.5) rotateY(90deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotateY(180deg);
+        transform: scale(1) rotateY(180deg);
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Match Game of Thrones</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand navbar-dark bg-dark nav-header">
+    <a class="navbar-brand col-8" href="index.html">GoT Memory Match</a>
+    <div id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item col-6 offset-sm-2 offset-md-6">
+                <button class="btn btn-light"><a href="https://nickstrebig.com">About</a></button>
+            </li>
+            <li class="nav-item offset-1">
+                <button class="btn btn-light resetButton">Reset</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row stats-area">
+        <div class="col-3 games-played text-center">
+            <p class="label">Games Played</p>
+            <p class="value" >0</p>
+        </div>
+        <div class="col-3 attempts text-center">
+            <p class="label">Made Attempts</p>
+            <p class="value">0</p>
+        </div>
+        <div class="col-3 attemptsRemaining text-center">
+            <p class="label">Attempts Remain</p>
+            <p class="value">15</p>
+        </div>
+        <div class="col-3 accuracy text-center">
+            <p class="label">Current Accuracy</p>
+            <p class="value">0%</p>
+        </div>
+    </div>
+        <div class="mainGame"> </div>
+</div>
+
+<div class="modal fade" id="win-game-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLongTitle">You've Saved Yourself This Time... Congrats!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/Jon-White-Walker-2.gif" class="img-fluid">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="lost-game-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLongTitle">You've Fallen to your Death. LOSS!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/Falling.gif" class="img-fluid">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
