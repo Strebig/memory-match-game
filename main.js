@@ -30,7 +30,9 @@ function initializeApp() {
         if (first_card_clicked || second_card_clicked){
             hideBothCards();
         }
-        gamesPlayed++;
+        if (attempts > 0) {
+            gamesPlayed++;
+        }
         resetStats();
         displayStats();
         $('.mainGame').empty();
